@@ -1,0 +1,2 @@
+int n = 100
+System.print "The value of n is"+ $n
