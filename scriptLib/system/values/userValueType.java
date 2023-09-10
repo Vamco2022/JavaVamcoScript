@@ -8,5 +8,6 @@ public enum userValueType {
     Float,
     Double,
     Long,
+    Bool,
     Object
 }

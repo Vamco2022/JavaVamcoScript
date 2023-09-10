@@ -1,8 +1,8 @@
 package scriptLib.system.values;
 
 public class values<T> {
-    systemValueType st;
-    userValueType ut;
+    public systemValueType st;
+    public userValueType ut;
     public T date;
     public values(systemValueType s,userValueType u,T date){
         this.st = s;

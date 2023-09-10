@@ -8,6 +8,7 @@ enum systemValueType{
     Float,
     Double,
     Long,
+    Boolean,
 
     Object
 

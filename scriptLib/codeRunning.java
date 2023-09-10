@@ -27,7 +27,7 @@ public class codeRunning {
                             break;
                     }
                 }
-                else if (ctl[0].equals("int") || ctl[0].equals("double") || ctl[0].equals("string")){
+                else if (ctl[0].equals("int") || ctl[0].equals("double") || ctl[0].equals("string") || ctl[0].equals("bool")){
                     valueSet.vs(ctl);
                 }
             }
@@ -60,17 +60,34 @@ class valueSet{
                 st = systemValueType.Integer;
                 values<Integer> iv = new values<>(st,ut,Integer.parseInt(valueDate));
                 global.valueLib.put(valueName,iv);
+                break;
+
             case "double":
                 ut = userValueType.Double;
                 st = systemValueType.Double;
                 values<Double> dv = new values<>(st,ut,Double.parseDouble(valueDate));
                 global.valueLib.put(valueName,dv);
+                break;
 
             case "string":
                 ut = userValueType.String;
                 st = systemValueType.String;
                 values<String> sv = new values<>(st,ut,valueDate);
                 global.valueLib.put(valueName,sv);
+                break;
+
+            case "bool":
+                ut = userValueType.Bool;
+                st = systemValueType.Boolean;
+                boolean b;
+                if (valueDate.equals("true")){
+                    b = true;
+                }else{
+                    b = false;
+                }
+                values<Boolean> bv = new values<>(st,ut,b);
+                global.valueLib.put(valueName,bv);
+                break;
         }
     }
 }
