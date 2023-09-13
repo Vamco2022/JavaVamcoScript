@@ -1,5 +1,6 @@
 package scriptLib;
 
+import scriptLib.debugClass.haveNews;
 import scriptLib.system.out.print;
 import scriptLib.system.out.println;
 import scriptLib.system.values.userValueType;
@@ -35,6 +36,7 @@ public class codeRunning {
     }
 }
 
+@haveNews(what = "update the value set more fast and more easy and clean (Not fix over)")
 class valueSet{
     public static void vs(String[] c){
         userValueType ut;
@@ -80,11 +82,7 @@ class valueSet{
                 ut = userValueType.Bool;
                 st = systemValueType.Boolean;
                 boolean b;
-                if (valueDate.equals("true")){
-                    b = true;
-                }else{
-                    b = false;
-                }
+                b = valueDate.equals("true");
                 values<Boolean> bv = new values<>(st,ut,b);
                 global.valueLib.put(valueName,bv);
                 break;
